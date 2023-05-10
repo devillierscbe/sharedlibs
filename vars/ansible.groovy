@@ -1,3 +1,3 @@
-def tomcatDeploy(String inventory, String playbook){
- sh "ansible-playbook -i ${inventory} ${playbook}"
+def tomcatDeploy(){
+ ansiblePlaybook credentialsId: 'Ansible', disableHostKeyChecking: true, installation: 'ansible', inventory: 'demo.inv', playbook: 'libdemo.yml'
 }
