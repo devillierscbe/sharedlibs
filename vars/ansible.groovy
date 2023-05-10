@@ -1,4 +1,3 @@
-def tomcatDeploy()
-{
- sh "ansible-playbook -i tomcat libdemo.yml"
+def tomcatDeploy(String inventory, String playbook){
+ sh "ansible-playbook -i ${inventory} ${playbook}"
 }
